@@ -1,56 +1,68 @@
-import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
-import { button as buttonStyles } from "@heroui/theme";
+"use client";
 
-import { siteConfig } from "@/config/site";
-import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+import { useEffect } from "react";
+import Lottie from "lottie-react";
+import { Button } from "@heroui/button";
+
+import test from "./test.json";
+
+import {
+  animateWordChange,
+  animateWordChange2,
+  animateWordChange3,
+} from "@/utils/animateWords";
 
 export default function Home() {
+  useEffect(() => {
+    // Initialize animation for all word groups in parallel
+    // const cleanup = animateAllWordGroups();
+    const cleanup = animateWordChange();
+    const cleanup2 = animateWordChange2();
+    const cleanup3 = animateWordChange3();
+
+    return () => {
+      // Cleanup interval if the component unmounts
+      cleanup && cleanup();
+      cleanup2 && cleanup2();
+      cleanup3 && cleanup3();
+    };
+  }, []);
+
   return (
-    <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-      <div className="inline-block max-w-xl text-center justify-center">
-        <span className={title()}>Make&nbsp;</span>
-        <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
-        <br />
-        <span className={title()}>
-          websites regardless of your design experience.
-        </span>
-        <div className={subtitle({ class: "mt-4" })}>
-          Beautiful, fast and modern React UI library.
-        </div>
-      </div>
-
-      <div className="flex gap-3">
-        <Link
-          isExternal
-          className={buttonStyles({
-            color: "primary",
-            radius: "full",
-            variant: "shadow",
-          })}
-          href={siteConfig.links.docs}
-        >
-          Documentation
-        </Link>
-        <Link
-          isExternal
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
-        >
-          <GithubIcon size={20} />
-          GitHub
-        </Link>
-      </div>
-
-      <div className="mt-8">
-        <Snippet hideCopyButton hideSymbol variant="bordered">
-          <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
+    <section className="flex flex-col md:flex-row justify-between gap-4 py-8 md:py-10">
+      <div className="w-full md:w-1/2">
+        <h1 className="text-4xl md:text-8xl font-semibold leading-tight">
+          We{" "}
+          <span className="ml-4" id="word-1">
+            <span className="word">develop</span>
+            <span className="word">build</span>
+            <span className="word">create</span>
           </span>
-        </Snippet>
+          <br />
+          <span className="" id="word-2">
+            <span className="word2">websites</span>
+            <span className="word2">solutions</span>
+          </span>
+          <br />
+          that{" "}
+          <span className="ml-4" id="word-3">
+            <span className="word3">users</span>
+            <span className="word3">brands</span>
+            <span className="word3">people</span>
+          </span>
+          <br />
+          love
+        </h1>
+        <p className="my-5 max-w-md text-xl leading-relaxed">
+          We make websites that convert your audience from passive viewers to
+          active brand enthusiasts.
+        </p>
+        <Button className="w-fit my-5" color="primary" size="lg">
+          Get Started
+        </Button>
       </div>
+
+      <Lottie loop animationData={test} className="w-full md:w-1/2" />
     </section>
   );
 }
