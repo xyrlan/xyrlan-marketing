@@ -1,5 +1,3 @@
-// utils/animateWords.ts
-
 export const animateAllWordGroups = () => {
   // List of IDs that group our words
   const groupIds = ["word-1", "word-2", "word-3"];
