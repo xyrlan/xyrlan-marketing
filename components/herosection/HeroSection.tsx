@@ -23,9 +23,9 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="flex flex-col md:flex-row justify-between gap-4 py-8 md:py-10 container mx-auto max-w-7xl">
+    <section className="flex flex-col md:flex-row justify-between md:gap-4 max-md:px-5 py-24 md:py-10 container mx-auto max-w-7xl">
       <div className="w-full md:w-1/2">
-        <h1 className="text-4xl md:text-8xl font-semibold leading-tight">
+        <h1 className="text-5xl md:text-8xl font-semibold leading-tight">
           We{" "}
           <span className="ml-4" id="word-1">
             <span className="word">develop</span>
@@ -51,7 +51,7 @@ const HeroSection = () => {
           We make websites that convert your audience from passive viewers to
           active brand enthusiasts.
         </p>
-        <Button className="w-fit my-5" color="primary" size="lg">
+        <Button className="w-fit my-5" color="primary" radius="full" size="lg">
           Get Started
         </Button>
       </div>

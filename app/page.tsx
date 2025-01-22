@@ -11,7 +11,7 @@ const HeroSection = dynamic(
 
 export default function Home() {
   return (
-    <div className="h-[95vh] flex flex-col justify-center bg-background rounded-[100px]">
+    <div className="md:h-[95vh] flex flex-col justify-center bg-background md:rounded-[100px] rounded-[50px]">
       <HeroSection />
     </div>
   );
