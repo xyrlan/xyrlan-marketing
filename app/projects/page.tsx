@@ -96,7 +96,7 @@ export default function ProjectsPage() {
 
   return (
     <div className="min-h-screen bg-default-50 ">
-      <div className=" bg-background rounded-b-[5rem] pt-32">
+      <div className=" bg-background rounded-b-[5rem] pt-24">
         <div className="relative px-4 pb-10 lg:p-20 container mx-auto ">
           <div className="text-tiny text-primary mb-8 tracking-wider uppercase">
             PORTFÓLIO
