@@ -61,7 +61,7 @@ const AboutSection = () => {
           </motion.p>
         </div>
 
-        <div className="flex flex-row max-lg:flex-wrap gap-8 overflow-hidden justify-center lg:py-24 py-5 max-lg:px-4">
+        <div className="flex flex-row max-lg:flex-wrap gap-8 overflow-hidden justify-center lg:py-24 py-5 px-4">
           {cards.map((card, index) => (
             <div key={card.title} className="flex flex-col group">
               <div
