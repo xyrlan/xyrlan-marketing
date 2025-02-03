@@ -1,5 +1,6 @@
 import { Button } from "@heroui/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const services = [
   {
@@ -207,8 +208,10 @@ const ServicesSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
         >
           <Button
+            as={Link}
             className="font-medium"
             color="primary"
+            href="/#contact"
             radius="full"
             size="lg"
             variant="shadow"

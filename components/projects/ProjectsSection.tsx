@@ -52,7 +52,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section className="py-32 md:rounded-[100px] rounded-[50px] mt-16">
+    <section className="py-20 lg:py-32 md:rounded-[100px] rounded-[50px] mt-16">
       <div className="container mx-auto max-w-7xl px-6 md:px-4">
         <motion.div
           className="text-center mb-16"

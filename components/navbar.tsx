@@ -45,14 +45,14 @@ export const Navbar = () => {
 
   return (
     <HeroUINavbar
-      className="bg-transparent fixed backdrop-blur-none py-4"
+      className="bg-transparent fixed backdrop-blur-none backdrop-grayscale  py-4"
       maxWidth="xl"
     >
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
+          <NextLink className="flex justify-start items-center " href="/">
             <Logo />
-            {/* <p className="font-bold text-inherit">ACME</p> */}
+            <p className="font-bold text-inherit mt-3">rlan</p>
           </NextLink>
         </NavbarBrand>
       </NavbarContent>
@@ -82,14 +82,14 @@ export const Navbar = () => {
         </ul>
         <NavbarItem className="hidden md:flex">
           <Button
-            isExternal
             as={Link}
-            className="text-sm font-normal text-default-600 bg-default-100"
-            href={siteConfig.links.sponsor}
-            startContent={<HeartFilledIcon className="text-danger" />}
-            variant="flat"
+            className="text-sm font-normal"
+            color="default"
+            endContent={<HeartFilledIcon className="text-danger" />}
+            href={"/#contact"}
+            variant="faded"
           >
-            Contact
+            Contato
           </Button>
         </NavbarItem>
       </NavbarContent>
@@ -111,13 +111,25 @@ export const Navbar = () => {
                       ? "danger"
                       : "foreground"
                 }
-                href="#"
+                href={item.href}
                 size="lg"
               >
                 {item.label}
               </Link>
             </NavbarMenuItem>
           ))}
+          <NavbarMenuItem>
+            <Button
+              as={Link}
+              className="text-sm font-normal"
+              color="default"
+              endContent={<HeartFilledIcon className="text-danger" />}
+              href={"/#contact"}
+              variant="faded"
+            >
+              Contato
+            </Button>
+          </NavbarMenuItem>
         </div>
       </NavbarMenu>
     </HeroUINavbar>

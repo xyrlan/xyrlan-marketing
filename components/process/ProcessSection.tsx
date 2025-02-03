@@ -1,4 +1,6 @@
+import { Button } from "@heroui/button";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const steps = [
   {
@@ -153,7 +155,7 @@ const ProcessSection = () => {
   };
 
   return (
-    <section className="py-32 bg-default-50 md:rounded-[100px] rounded-[50px] overflow-hidden">
+    <section className="py-20 lg:py-32 bg-default-50 md:rounded-[100px] rounded-[50px] overflow-hidden">
       <div className="container mx-auto max-w-7xl px-6 md:px-4">
         <motion.div
           className="text-center mb-16"
@@ -200,6 +202,25 @@ const ProcessSection = () => {
               </div>
             </motion.div>
           ))}
+        </motion.div>
+        <motion.div
+          className="text-center mt-16"
+          initial={{ opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+          whileInView={{ opacity: 1, y: 0 }}
+        >
+          <Button
+            as={Link}
+            className="font-medium"
+            color="primary"
+            href="/#contact"
+            radius="full"
+            size="lg"
+            variant="shadow"
+          >
+            Iniciar um Projeto
+          </Button>
         </motion.div>
       </div>
     </section>

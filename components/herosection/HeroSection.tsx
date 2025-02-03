@@ -1,6 +1,7 @@
 import { Button } from "@heroui/button";
 import Lottie from "lottie-react";
 import React, { useEffect } from "react";
+import Link from "next/link";
 
 import animation from "@/app/animation.json";
 import {
@@ -26,7 +27,7 @@ const HeroSection = () => {
     <section className="md:h-[95vh] flex flex-col justify-center bg-background ">
       <div className="flex flex-col md:flex-row justify-between md:gap-4 max-md:px-5 py-24 md:py-10 container mx-auto max-w-7xl">
         <div className="w-full md:w-1/2">
-          <h1 className="text-5xl md:text-8xl font-semibold leading-tight">
+          <h1 className="text-4xl md:text-8xl font-semibold leading-tight">
             Nós{" "}
             <span className="ml-4" id="word-1">
               <span className="word">desenvolvemos</span>
@@ -48,18 +49,33 @@ const HeroSection = () => {
             <br />
             amam
           </h1>
-          <p className="my-5 max-w-md text-xl leading-relaxed">
+          <p className="my-5 max-w-md text-lg lg:text-xl leading-relaxed">
             Nós construímos sites que transformam seu público-alvo de
             visualizadores passivos em entusiastas de marcas ativas.
           </p>
-          <Button
-            className="w-fit my-5"
-            color="primary"
-            radius="full"
-            size="lg"
-          >
-            Começar Agora
-          </Button>
+          <div className="flex gap-4 items-center my-7">
+            <Button
+              as={Link}
+              className="font-medium text-sm px-8 w-fit self-end"
+              color="secondary"
+              href="/#contact"
+              radius="full"
+              size="lg"
+            >
+              Entrar em Contato
+            </Button>
+            <Button
+              as={Link}
+              className="w-fit"
+              color="primary"
+              href="/#about"
+              radius="full"
+              size="lg"
+              variant="bordered"
+            >
+              Saiba mais
+            </Button>
+          </div>
         </div>
 
         <Lottie loop animationData={animation} className="w-full md:w-1/2" />
