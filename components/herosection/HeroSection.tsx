@@ -1,7 +1,9 @@
 import { Button } from "@heroui/button";
-import Lottie from "lottie-react";
 import React, { useEffect } from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 import animation from "@/app/animation.json";
 import {
