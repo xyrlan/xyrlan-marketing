@@ -26,7 +26,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="md:h-[95vh] flex flex-col justify-center bg-background ">
+    <section className="md:h-[95vh] flex flex-col justify-center bg-background md:px-4">
       <div className="flex flex-col md:flex-row justify-between md:gap-4 max-md:px-5 py-24 md:py-10 container mx-auto max-w-7xl">
         <div className="w-full md:w-1/2">
           <h1 className="text-4xl md:text-8xl font-semibold leading-tight">
