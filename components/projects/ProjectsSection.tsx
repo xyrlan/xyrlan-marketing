@@ -8,22 +8,22 @@ const projects = [
     title: "Stop By Cafe",
     description:
       "Site feito para uma cafeteria localizada no centro de Nova York",
-    href: "https://stopbycafe.vercel.app/",
+    href: "https://stopbycafe.com/",
     tags: ["Next.js", "TailwindCSS", "Framer Motion"],
   },
   {
     id: 1,
     title: "Pesqueiro 110",
-    description: "Aplicação Full Stack utilizando Nextjs integrada com Sanity",
-    href: "https://www.pesqueiro110.com.br/",
+    description: "Aplicação Full Stack utilizando Nextjs integrada comity",
+    href: "https://www.pesqueiro110.com",
     tags: ["Next.js", "Sanity", "TailwindCSS"],
   },
   {
     id: 3,
     title: "OAB para todos",
     description:
-      "Um site feito para a OAB DF, a maior organização de advogados do Brasil, com animações complexas e leves ao mesmo tempo.",
-    href: "https://www.oabdfparatodos.com.br/",
+      "Um site feito para a OAB DF, a maior organização de advogados do Brasil, commações complexas e leves ao mesmo tempo.",
+    href: "https://www.oabdfparatodos.com",
     tags: ["Next.js", "Framer Motion", "TailwindCSS"],
   },
 ];

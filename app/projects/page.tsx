@@ -6,6 +6,14 @@ import Link from "next/link";
 
 const allProjects = [
   {
+    id: 0,
+    title: "Stop By Cafe",
+    description:
+      "Site feito para uma cafeteria localizada no centro de Nova York",
+    href: "https://stopbycafe.com/",
+    tags: ["Next.js", "TailwindCSS", "Framer Motion"],
+  },
+  {
     id: 1,
     title: "Pesqueiro 110",
     description:
